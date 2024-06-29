@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+    /* background-color: aqua; */
+}
+.container h1{
+    color: blue;
+}
+.container header{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+.container header .shop{
+    position: relative;
+    text-align: right;
+
+}
+.shop i{
+    font-size: 3rem;
+    color: blue;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.shop i:hover{
+    color: blueviolet;
+}
+.shop span{
+    background-color: brown;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.container .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+.card{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: antiquewhite;
+    border-left: 1px solid blue;
+    height: 100vh;
+    transition: 0.5s;
+
+}
+.active .card{
+    left: calc(100% -500px);
+}
+.active .container{
+    transform: translateX(-200px);
+}
+.card h1{
+    color: blue;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div{
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card .checkOut div:nth-child(2){
+    background-color: black;
+    color: white;
+}
+.list .item{
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 50px 50px;
+    letter-spacing: 1px;
+    transition: all 0.25s;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.list .item:hover{
+    background-color: blue;
+}
+.list .item img{
+    width: 80%;
+    height: 250px;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item:hover .title,
+.list .item:hover .price{
+    color: white;
+}
+.list .item button{
+    background-color: white;
+    color: blue;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid blue;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+.list .item button:hover{
+    background-color: rgb(84, 66, 114);
+    color: white;
+}
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3,1fr);
+    color: white;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard .count{
+    margin: 0px 10px;
+    color: black;
+
+}
+.cardTitle,
+.cardPrice{
+    color: black;
+}
+.cardButton{
+    width: 28px;
+    height: 28px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
